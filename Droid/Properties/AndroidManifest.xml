@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.thc.colorado_roads">
-	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="Colorado Roads">
-	</application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="0" android:versionName="0.0.1" package="com.thc.colorado_roads">
+	<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="23" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="Colorado Roads" android:allowBackup="true" android:debuggable="true"></application>
 </manifest>

@@ -1,10 +1,8 @@
 ﻿using System;
 namespace ColoradoRoads
 {
-	public class MyClass
+	public interface IRestApiService
 	{
-		public MyClass()
-		{
-		}
+		
 	}
 }
