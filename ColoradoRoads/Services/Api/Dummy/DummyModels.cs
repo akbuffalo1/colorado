@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ColoradoRoads.Api;
 using ColoradoRoads.Models;
 
 namespace ColoradoRoads.Dummy
@@ -14,12 +15,21 @@ namespace ColoradoRoads.Dummy
 			Description = $"I-70{index} ajsdajskd asdasd asd asd a sd   adasdasdasd asdasdasdasd asdasdasd"
 		}).ToList();
 
-		public static FavouriteLocationsModel FavouritesLocationModel = new FavouriteLocationsModel
+		public static LocationsModel FavouritesLocationModel = new LocationsModel
 		{
 			Items = Enumerable.Range(0, 5).Select(index => new IdDescriptionListItemModel
 			{
 				Id = index,
-				Description = $"Location{index}"
+				Description = $"Location - {index}"
+			}).ToList()
+		};
+
+		public static LocationsModel AllLocationModel = new LocationsModel
+		{
+			Items = Enumerable.Range(0, 15).Select(index => new IdDescriptionListItemModel
+			{
+				Id = index,
+				Description = $"Location - {index}"
 			}).ToList()
 		};
 

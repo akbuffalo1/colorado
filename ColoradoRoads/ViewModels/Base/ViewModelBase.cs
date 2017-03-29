@@ -10,12 +10,13 @@ using MvvmCross.Platform.Platform;
 using System.Diagnostics;
 using ColoradoRoadse.Exceptions;
 using PropertyChanged;
+using Newtonsoft.Json;
 
 namespace ColoradoRoads.ViewModels.Base
 {
 	[ImplementPropertyChanged]
 	public class ViewModelBase : MvxViewModel
-	{
+	{ 
 		Lazy<IMvxViewModelLocator> _viewModelLocator = new Lazy<IMvxViewModelLocator>(Mvx.Resolve<IMvxViewModelLocator>);
 		protected Lazy<IRestApiService> _serverApiService = new Lazy<IRestApiService>(Mvx.Resolve<IRestApiService>);
 
@@ -35,7 +36,7 @@ namespace ColoradoRoads.ViewModels.Base
 
 		public ViewModelBase()
 		{
-			
+
 		}
 
 		public virtual string Title
@@ -268,8 +269,6 @@ namespace ColoradoRoads.ViewModels.Base
 			return true;
 		}
 
-
-
 		void DebugMethod([System.Runtime.CompilerServices.CallerMemberName] string memberName = "")
 		{
 			Debug.WriteLine(string.Format("{1} of {0}", memberName, this.GetType().FullName));
@@ -278,6 +277,7 @@ namespace ColoradoRoads.ViewModels.Base
 		public virtual void OnResume()
 		{
 			DebugMethod();
+			ObtainAndPrepareData();
 		}
 
 		public virtual void OnPause()
@@ -289,6 +289,34 @@ namespace ColoradoRoads.ViewModels.Base
 		{
 			DebugMethod();
 		}
+
+		protected virtual void ObtainAndPrepareData() { }
+	}
+
+	public abstract class ViewModelBase<TInit> : ViewModelBase, IInitViewModel<TInit>
+	{
+		protected TInit InitData;
+		public virtual void Init(TInit initData) 
+		{
+			InitData = initData;
+		}
+
+		public virtual void Init(string initData) 
+		{
+			if (!string.IsNullOrEmpty(initData))
+			{
+				try
+				{
+					InitData = Mvx.Resolve<IMvxJsonConverter>().DeserializeObject<TInit>(initData);
+				}
+				catch (JsonException ex)
+				{
+					Mvx.Trace(ex.Message);
+				}
+			}
+		}
+
+		public virtual void RealInit(TInit parameter) { }
 	}
 }
 

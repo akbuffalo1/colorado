@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ColoradoRoads.Api;
 using ColoradoRoads.Models;
 
 namespace ColoradoRoads
 {
 	public class RestApiService : RestApiServiceProvider, IRestApiService
 	{
-		public virtual Task<FavouriteLocationsModel> GetFavouriteLocations()
+		public virtual Task<LocationsModel> GetAllLocations()
+		{
+			throw new NotImplementedException();
+		}
+
+		public virtual Task<LocationsModel> GetFavouriteLocations()
 		{
 			throw new NotImplementedException();
 		}

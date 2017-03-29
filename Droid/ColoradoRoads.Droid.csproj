@@ -204,6 +204,7 @@
     <Compile Include="Controlls\TrafficDiagramView.cs" />
     <Compile Include="Views\TravelTimeSummaryView.cs" />
     <Compile Include="Views\LocationDetailsView.cs" />
+    <Compile Include="Views\LocationsListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -234,6 +235,8 @@
     <AndroidResource Include="Resources\layout\layout_travel_time_summary_item.axml" />
     <AndroidResource Include="Resources\drawable\travel_summary_list_divider.axml" />
     <AndroidResource Include="Resources\layout\activity_location_details.axml" />
+    <AndroidResource Include="Resources\layout\activity_locations_list.axml" />
+    <AndroidResource Include="Resources\layout\layout_location_list_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

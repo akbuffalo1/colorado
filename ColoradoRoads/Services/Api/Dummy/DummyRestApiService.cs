@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ColoradoRoads.Api;
 using ColoradoRoads.Dummy;
 using ColoradoRoads.Models;
 
@@ -18,7 +19,7 @@ namespace ColoradoRoads
 			});
 		}
 
-		public override Task<FavouriteLocationsModel> GetFavouriteLocations()
+		public override Task<LocationsModel> GetFavouriteLocations()
 		{
 			//	if (App.MOCK_SERVICE_LEVEL == -1) return base.GetFavouriteLocations();
 			return Task.Run(() =>
@@ -33,6 +34,15 @@ namespace ColoradoRoads
 			return Task.Run(() =>
 			{
 				return DummyModels.TravelTimeSummaryModel(type);
+			});
+		}
+
+		public override Task<LocationsModel> GetAllLocations()
+		{
+			//	if (App.MOCK_SERVICE_LEVEL == -1) return base.GetFavouriteLocations();
+			return Task.Run(() =>
+			{
+				return DummyModels.AllLocationModel;
 			});
 		}
 	}

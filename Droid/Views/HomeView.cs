@@ -5,6 +5,7 @@ using Android.OS;
 using Android.Support.V4.View;
 using Android.Support.V7.Widget;
 using Android.Views;
+using ColoradoRoads;
 using ColoradoRoads.Droid.Adapters;
 using ColoradoRoads.Dummy;
 using Com.Bumptech.Glide;
@@ -33,8 +34,6 @@ namespace ColoradoRoads.Droid
 			//carouselView.SetViewListener(new CustomViewListener(this, carouselView));
 
 			carouselView = FindViewById<ViewPager>(Resource.Id.TopCarouselView);
-
-
 
 			carouselView.Adapter = new TopCarouselViewAdapter(this, DummyModels.RoadConditionNotificationModel);
 

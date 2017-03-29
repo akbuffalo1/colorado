@@ -65,7 +65,7 @@ namespace ColoradoRoads.ViewModels
 
 		void HandleOpenI70ListOfLocationsCommand()
 		{
-			throw new NotImplementedException();
+			ShowViewModel<LocationsListViewModel>();
 		}
 
 		void HandleOpenI70CoalitionCommand()

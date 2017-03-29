@@ -14,13 +14,15 @@ namespace ColoradoRoads
 		public List<AddEditDeleteListItemDataHolder<IdDescriptionListItemModel>> FavouriteLocations { get; set; }
 
 		public IMvxCommand ShowMainMenuCommand { get; set; }
+		public IMvxCommand ShowAllLocationsCommand { get; set; }
 
 		public HomeViewModel()
 		{
 			ShowMainMenuCommand = new MvxCommand(HandleShowMainMenuCommand);
+			ShowAllLocationsCommand = new MvxCommand(HandleShowAllLocationsCommand);
 		}
 
-		async void ObtainAndPrepareData()
+		protected override async void ObtainAndPrepareData()
 		{
 			var result = await ServerCommandWrapper(_serverApiService.Value.GetNotifications);
 			if (result?.Count > 0)
@@ -43,15 +45,14 @@ namespace ColoradoRoads
 			ShowViewModel<LocationDetailsViewModel>(new { Id = itemModel.Id });
 		}
 
+		void HandleShowAllLocationsCommand()
+		{
+			ShowViewModel<LocationsListViewModel>();
+		}
+
 		void HandleShowMainMenuCommand()
 		{
 			ShowViewModel<MainMenuViewModel>();
-		}
-
-		public override void OnResume()
-		{
-			base.OnResume();
-			ObtainAndPrepareData();
 		}
 	}
 }

@@ -3,37 +3,16 @@ using ColoradoRoads.ViewModels.Base;
 
 namespace ColoradoRoads.ViewModels
 {
-	public class LocationDetailsViewModel : ViewModelBase, IInitViewModel<int>
+	public class LocationDetailsViewModel : ViewModelBase<int>
 	{
 		int locationId = -1;
 		public LocationDetailsViewModel()
 		{
 		}
 
-		async void ObtainAndPrepareData()
+		protected override async void ObtainAndPrepareData()
 		{
 			
-		}
-
-		public void Init(int Id)
-		{
-			locationId = Id;
-		}
-
-		public void RealInit(int locationId)
-		{
-			
-		}
-
-		public void Init(string parameter)
-		{
-			
-		}
-
-		public override void OnResume()
-		{
-			base.OnResume();
-			ObtainAndPrepareData();
 		}
 	}
 }
