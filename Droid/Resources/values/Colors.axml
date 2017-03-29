@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#455189</color>
+    <color name="colorPrimaryDark">#3a4473</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="menu_item_gray">#505c68</color>
+    <color name="menu_item_dark_gray">#3e4750</color>
+
+    <color name="bg_dark_gray">#b4b3b3</color>
+    <color name="bg_gray">#cacaca</color>
+    <color name="bg_ligth_gray">#e2e2e2</color>
+</resources>

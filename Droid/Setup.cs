@@ -12,6 +12,8 @@ using Chance.MvvmCross.Plugins.UserInteraction;
 using Chance.MvvmCross.Plugins.UserInteraction.Droid;
 using MvvmCross.Platform.IoC;
 using System;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace ColoradoRoads.Droid
 {
@@ -76,6 +78,16 @@ namespace ColoradoRoads.Droid
 		{
 			foreach (var item in CreatableTypes().EndingWith("Converter"))
 				registry.AddOrOverwrite(item.Name, (IMvxValueConverter)Activator.CreateInstance(item));
+		}
+
+		protected override IEnumerable<Assembly> AndroidViewAssemblies
+		{
+			get
+			{
+				var toReturn = new List<Assembly>(base.AndroidViewAssemblies);
+				toReturn.Add(this.GetType().Assembly);
+				return toReturn;
+			}
 		}
 	}
 }

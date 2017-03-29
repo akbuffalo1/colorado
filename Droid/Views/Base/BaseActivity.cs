@@ -45,7 +45,7 @@ namespace ColoradoRoads.Droid
 
 			SetContentView(LayoutId());
 
-			//toolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
+			toolbar = FindViewById<SupportToolbar>(Resource.Id.ToolBar);
 
 			if (toolbar != null)
 			{

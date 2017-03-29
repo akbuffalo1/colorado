@@ -9,9 +9,11 @@ using Chance.MvvmCross.Plugins.UserInteraction;
 using MvvmCross.Platform.Platform;
 using System.Diagnostics;
 using ColoradoRoadse.Exceptions;
+using PropertyChanged;
 
 namespace ColoradoRoads.ViewModels.Base
 {
+	[ImplementPropertyChanged]
 	public class ViewModelBase : MvxViewModel
 	{
 		Lazy<IMvxViewModelLocator> _viewModelLocator = new Lazy<IMvxViewModelLocator>(Mvx.Resolve<IMvxViewModelLocator>);
@@ -106,6 +108,36 @@ namespace ColoradoRoads.ViewModels.Base
 			}
 		}
 
+		protected virtual async Task<TResult> ServerCommandWrapper<TResult>(Func<Task<TResult>> function)
+		{
+			if (IsBusy)
+			{
+				return await Task.Run(() => default(TResult));
+			}
+
+			try
+			{
+				IsBusy = true;
+				return await function();
+			}
+			catch (Exception ex)
+			{
+				if (ex is UiApiException)
+				{
+					await Mvx.Resolve<IUserInteraction>().AlertAsync(ex.Message, "Error has occured");
+				}
+				else
+				{
+					Mvx.Trace(ex.Message, ex.StackTrace);
+				}
+				return await Task.Run(() => default(TResult));
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
 		protected virtual async Task ServerCommandWrapper<T>(Func<T, Task> action, T arg)
 		{
 			if (IsBusy)
@@ -120,6 +152,36 @@ namespace ColoradoRoads.ViewModels.Base
 			catch (Exception ex)
 			{
 				Mvx.Trace(ex.Message, ex.StackTrace);
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
+		protected virtual async Task<TResult> ServerCommandWrapper<TResult, T>(Func<T, Task<TResult>> function, T arg)
+		{
+			if (IsBusy)
+			{
+				return await Task.Run(() => default(TResult));
+			}
+
+			try
+			{
+				IsBusy = true;
+				return await function(arg);
+			}
+			catch (Exception ex)
+			{
+				if (ex is UiApiException)
+				{
+					await Mvx.Resolve<IUserInteraction>().AlertAsync(ex.Message, "Error has occured");
+				}
+				else
+				{
+					Mvx.Trace(ex.Message, ex.StackTrace);
+				}
+				return await Task.Run(() => default(TResult));
 			}
 			finally
 			{

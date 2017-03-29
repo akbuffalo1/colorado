@@ -18,6 +18,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidTlsProvider></AndroidTlsProvider>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -173,6 +174,10 @@
       <Project>{068D8114-5B19-4103-817E-C1964C545EBB}</Project>
       <Name>ColoradoRoads</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CarouselView\CarouselView.csproj">
+      <Project>{56771951-61BF-44E3-99AB-99CB2BCA17D4}</Project>
+      <Name>CarouselView</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -193,12 +198,19 @@
     <Compile Include="Interfaces\IChildFragment.cs" />
     <Compile Include="Views\Base\BaseActivity.cs" />
     <Compile Include="Interfaces\ITitle.cs" />
+    <Compile Include="Adapters\TopCarouselViewAdapter.cs" />
+    <Compile Include="Views\MainMenuView.cs" />
+    <Compile Include="Controlls\TrafficDiagramViewContainer.cs" />
+    <Compile Include="Controlls\TrafficDiagramView.cs" />
+    <Compile Include="Views\TravelTimeSummaryView.cs" />
+    <Compile Include="Views\LocationDetailsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -210,12 +222,31 @@
     <AndroidResource Include="Resources\layout\Splash.axml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\layout\ActivityHome.axml" />
+    <AndroidResource Include="Resources\layout\LayoutNotificationItem.axml" />
+    <AndroidResource Include="Resources\values\Colors.axml" />
+    <AndroidResource Include="Resources\values\Styles.axml" />
+    <AndroidResource Include="Resources\layout\LayoutMainMenu.axml" />
+    <AndroidResource Include="Resources\menu\HomeMenu.axml" />
+    <AndroidResource Include="Resources\drawable\ic_launcher.png" />
+    <AndroidResource Include="Resources\layout\layout_favourite_locations_list_item.axml" />
+    <AndroidResource Include="Resources\drawable\empty_tall_divider.axml" />
+    <AndroidResource Include="Resources\layout\activity_travel_time_summary.axml" />
+    <AndroidResource Include="Resources\layout\layout_travel_time_summary_item.axml" />
+    <AndroidResource Include="Resources\drawable\travel_summary_list_divider.axml" />
+    <AndroidResource Include="Resources\layout\activity_location_details.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Views\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Controlls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets')" />
@@ -238,4 +269,5 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <Import Project="..\packages\Fody.1.29.4\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" />
 </Project>

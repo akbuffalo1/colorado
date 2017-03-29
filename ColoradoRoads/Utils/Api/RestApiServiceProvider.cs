@@ -17,7 +17,7 @@ using ColoradoRoads.Exceptions;
 
 namespace ColoradoRoads
 {
-	public class RestApiServiceProvider
+	public class RestApiServiceProvider : IDisposable
 	{
 #if DEBUG
 		const string BaseApiUrl = "https://{URL}";

@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoradoRoads.Droid", "Droi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoradoRoads.iOS", "iOS\ColoradoRoads.iOS.csproj", "{B6069382-9F8C-46FA-A345-481E3CAF32B6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Submodules", "Submodules", "{15391B26-AA5E-40D2-9DA0-38F52995E581}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bindings.Droid", "Bindings.Droid", "{F4D0D5D3-227B-4822-8196-B4EAFE46D89E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselView", "CarouselView\CarouselView.csproj", "{56771951-61BF-44E3-99AB-99CB2BCA17D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,5 +57,20 @@ Global
 		{B6069382-9F8C-46FA-A345-481E3CAF32B6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{B6069382-9F8C-46FA-A345-481E3CAF32B6}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{B6069382-9F8C-46FA-A345-481E3CAF32B6}.Debug|iPhone.Build.0 = Debug|iPhone
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Release|iPhone.Build.0 = Release|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4}.Debug|iPhone.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56771951-61BF-44E3-99AB-99CB2BCA17D4} = {F4D0D5D3-227B-4822-8196-B4EAFE46D89E}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,12 @@
+﻿<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.admin.myapplication.MainActivity">
+
+    <item
+        android:id="@+id/ActionMenu"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory="100"
+        android:title="Menu"
+        app:showAsAction="always" />
+</menu>

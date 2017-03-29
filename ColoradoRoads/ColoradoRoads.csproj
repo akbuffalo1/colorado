@@ -38,12 +38,22 @@
     <Compile Include="Services\Api\Implementations\RestApiService.cs" />
     <Compile Include="Services\Api\Dummy\DummyRestApiService.cs" />
     <Compile Include="CustomAppStart.cs" />
-    <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
     <Compile Include="Utils\Validator.cs" />
     <Compile Include="Utils\Helpers\MvxBindingContextOwnerExtensions.cs" />
     <Compile Include="Utils\Helpers\FastInvoke.cs" />
     <Compile Include="Interfaces\IInitViewModel.cs" />
+    <Compile Include="Enums\NotificationType.cs" />
+    <Compile Include="Services\Api\Dummy\DummyModels.cs" />
+    <Compile Include="ViewModels\MainMenuViewModel.cs" />
+    <Compile Include="Interfaces\IIdentifiable.cs" />
+    <Compile Include="ViewModels\TravelTimeSummaryViewModel.cs" />
+    <Compile Include="Models\Api\IdDescriptionListItemModel.cs" />
+    <Compile Include="Models\Api\RoadConditionNotificationModel.cs" />
+    <Compile Include="Models\Api\TravelTimeSummaryModel.cs" />
+    <Compile Include="Models\AddEditDeleteListItemDataHolder.cs" />
+    <Compile Include="ViewModels\LocationDetailsViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -82,9 +92,13 @@
     <Reference Include="Plugin.Permissions">
       <HintPath>..\packages\Plugin.Permissions.1.2.1\lib\portable-net45+wp80+win+wpa81\Plugin.Permissions.dll</HintPath>
     </Reference>
+    <Reference Include="PropertyChanged">
+      <HintPath>..\packages\PropertyChanged.Fody.1.52.1\lib\portable-net4+sl4+wp8+win8+wpa81+MonoAndroid16+MonoTouch40\PropertyChanged.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
@@ -99,6 +113,19 @@
     <Folder Include="ViewModels\Base\" />
     <Folder Include="Utils\Helpers\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Models\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Models\Api\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="PrefixedFlat" ResourceNamePolicy="FileFormatDefault" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <Import Project="..\packages\Fody.1.29.4\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\packages\Fody.1.29.4\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
 </Project>

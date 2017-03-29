@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            local:MvxBind="Text ForwardDirectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:background="@color/bg_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp">
+            <Mvx.MvxListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/travel_summary_list_divider"
+                android:scrollbars="vertical"
+                local:MvxItemTemplate="@layout/layout_travel_time_summary_item"
+                local:MvxBind="ItemsSource ForwardDirectionSegmentsList" />
+        </FrameLayout>
+        <TextView
+            local:MvxBind="Text BackwardDirectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:background="@color/bg_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp">
+            <Mvx.MvxListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/travel_summary_list_divider"
+                android:scrollbars="vertical"
+                local:MvxItemTemplate="@layout/layout_travel_time_summary_item"
+                local:MvxBind="ItemsSource BackwardDirectionSegmentsList" />
+        </FrameLayout>
+        <Button
+            android:text="Back"
+            android:textColor="@color/bg_dark_gray"
+            local:MvxBind="Click BackCommand"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</LinearLayout>

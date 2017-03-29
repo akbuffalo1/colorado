@@ -1,5 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">ColoradoRoads.Droid</string>
+﻿<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_travel_time_summary">Travel Time Summary</string>
+    <string name="menu_current_travel_info">Current Travel Info</string>
+    <string name="menu_list_of_locations">List Of Locations</string>
+    <string name="menu_i_70_outlook">I-70 OUTLOOK</string>
+    <string name="menu_i_25_outlook">I-25 OUTLOOK</string>
+    <string name="menu_statewide">STATEWIDE</string>
+    <string name="menu_map">Map</string>
+    <string name="menu_severe_alerts">Severe Alerts</string>
+    <string name="menu_road_work_alerts">Road Work Alerts</string>
 </resources>

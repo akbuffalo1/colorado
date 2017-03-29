@@ -8,7 +8,7 @@ using Plugin.CurrentActivity;
 namespace ColoradoRoads.Droid
 {
 	//You can specify additional application information in this attribute
-    [Application]
+	[Application(Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
     public class MainApplication : Application, Application.IActivityLifecycleCallbacks
     {
         public MainApplication(IntPtr handle, JniHandleOwnership transer)
