@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/bg_ligth_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:showDividers="middle"
+        android:divider="@drawable/empty_tall_divider"
+        android:padding="10dp">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/ToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/TopCarouselView"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <FrameLayout
+            android:background="@color/bg_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp">
+            <TrafficDiagramViewContainer
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="70dp">
+                <TrafficDiagramView
+                    android:background="#112233"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+                <TrafficDiagramView
+                    android:background="#332211"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+            </TrafficDiagramViewContainer>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Mvx.MvxListView
+                android:id="@+id/lvFavouriteLocations"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                local:MvxItemTemplate="@layout/layout_favourite_locations_list_item"
+                local:MvxBind="ItemsSource FavouriteLocations" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnLocations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@android:drawable/ic_menu_search"
+                android:paddingBottom="16dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:text="Locations"
+                android:textSize="16sp"
+                local:MvxBind="Click ShowAllLocationsCommand" />
+            <Button
+                android:id="@+id/btnMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@android:drawable/ic_menu_search"
+                android:padding="16dp"
+                android:text="Map"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/btnGoI70"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@android:drawable/ic_menu_search"
+                android:paddingBottom="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="16dp"
+                android:text="Search"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/BottomCarouselView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

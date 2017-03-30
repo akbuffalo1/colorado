@@ -185,7 +185,6 @@
     <Compile Include="Bootstrap\LocationPluginBootstrap.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="MainApplication.cs" />
-    <Compile Include="SplashActivity.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Bootstrap\UserInteractionPluginBootstrap.cs" />
     <Compile Include="Views\HomeView.cs" />
@@ -205,6 +204,10 @@
     <Compile Include="Views\TravelTimeSummaryView.cs" />
     <Compile Include="Views\LocationDetailsView.cs" />
     <Compile Include="Views\LocationsListView.cs" />
+    <Compile Include="Views\SplashActivity.cs" />
+    <Compile Include="CustomBindings\ViewPagerTargetBinding.cs" />
+    <Compile Include="Controlls\DynamicLinearLayout.cs" />
+    <Compile Include="Utils\ListViewEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -220,14 +223,14 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\layout\Splash.axml" />
+    <AndroidResource Include="Resources\layout\activity_splash.axml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
-    <AndroidResource Include="Resources\layout\ActivityHome.axml" />
-    <AndroidResource Include="Resources\layout\LayoutNotificationItem.axml" />
+    <AndroidResource Include="Resources\layout\activity_home.axml" />
+    <AndroidResource Include="Resources\layout\layout_notification_item.axml" />
     <AndroidResource Include="Resources\values\Colors.axml" />
     <AndroidResource Include="Resources\values\Styles.axml" />
-    <AndroidResource Include="Resources\layout\LayoutMainMenu.axml" />
-    <AndroidResource Include="Resources\menu\HomeMenu.axml" />
+    <AndroidResource Include="Resources\layout\layout_main_menu.axml" />
+    <AndroidResource Include="Resources\menu\menu_home.axml" />
     <AndroidResource Include="Resources\drawable\ic_launcher.png" />
     <AndroidResource Include="Resources\layout\layout_favourite_locations_list_item.axml" />
     <AndroidResource Include="Resources\drawable\empty_tall_divider.axml" />
@@ -250,6 +253,8 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Controlls\" />
+    <Folder Include="CustomBindings\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets')" />

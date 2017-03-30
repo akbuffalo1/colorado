@@ -1,53 +1,67 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Support.V4.View;
 using Android.Support.V7.Widget;
 using Android.Views;
+using Android.Widget;
 using ColoradoRoads;
 using ColoradoRoads.Droid.Adapters;
+using ColoradoRoads.Droid.Utils;
 using ColoradoRoads.Dummy;
+using ColoradoRoads.Models;
 using Com.Bumptech.Glide;
 using Com.Synnapps.Carouselview;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using CarouselView = Com.Synnapps.Carouselview.BoundCarouselView;
 
 namespace ColoradoRoads.Droid
 {
 	[Activity(Label = "Colorado Roads", Icon = "@mipmap/ic_launcher")]
-	public class HomeView : BaseActivity<HomeViewModel>
+	public class HomeView : BaseActivity<HomeViewModel>, View.IOnTouchListener
 	{
-		ViewPager carouselView;
+		ViewPager topPager;
+		TopCarouselViewAdapter adapter;
+		MvxListView favLocations;
 
-		protected override int LayoutId() => Resource.Layout.ActivityHome;
+		protected override int LayoutId() => Resource.Layout.activity_home;
 
-		protected override int MenuId() => Resource.Menu.HomeMenu;
+		protected override int MenuId() => Resource.Menu.menu_home;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-			//carouselView = FindViewById<CarouselView>(Resource.Id.TopCarouselView);
-			//carouselView = new Com.Synnapps.Carouselview.BoundCarouselView(this);
-			//var container = FindViewById<LinearLayout>(Resource.Id.TopCarouselViewContainer);
-			//container.AddView(carouselView);
-			//carouselView.SetViewListener(new CustomViewListener(this, carouselView));
+			SupportActionBar.SetHomeAsUpIndicator(Resources.GetDrawable(Resource.Drawable.ic_launcher));
 
-			carouselView = FindViewById<ViewPager>(Resource.Id.TopCarouselView);
+			adapter = new TopCarouselViewAdapter(this, Resource.Layout.layout_notification_item, FillTopPager);
+			topPager = FindViewById<ViewPager>(Resource.Id.TopCarouselView);
+			topPager.Adapter = adapter;
+			topPager.SetClipToPadding(false);
+			topPager.PageMargin = 12;
 
-			carouselView.Adapter = new TopCarouselViewAdapter(this, DummyModels.RoadConditionNotificationModel);
+			favLocations = FindViewById<MvxListView>(Resource.Id.lvFavouriteLocations);
+			//favLocations.SetListViewHeightBasedOnChildren();
 
-			this.AddLinqBinding(ViewModel, vm => vm.NotificationModelsList, notificatins =>
+			//favLocations.SetOnTouchListener(this);
+
+			this.AddLinqBinding(ViewModel, vm => vm.NotificationModelsList, list =>
 			{
-				if (notificatins?.Count > 0)
-				{
-					carouselView.Adapter = new TopCarouselViewAdapter(this, notificatins);
+				if (list?.Count > 0)
+				{ 
+        			ViewGroup.LayoutParams layoutParameters = favLocations.LayoutParameters;
+					favLocations.LayoutParameters = new FrameLayout.LayoutParams(layoutParameters.Width, 30 * list.Count);				
 				}
 			});
 
-			SupportActionBar.SetHomeAsUpIndicator(Resources.GetDrawable(Resource.Drawable.ic_launcher));
+			this.CreateBinding(adapter).For(adapter => adapter.DataSource).To<HomeViewModel>(vm => vm.NotificationModelsList).Apply();
 		}
 
+		IList<RoadConditionNotificationModel> items;
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
 			switch (item.ItemId)
@@ -59,57 +73,25 @@ namespace ColoradoRoads.Droid
 			return base.OnOptionsItemSelected(item);
 		}
 
-		/*
-		public class CustomViewListener : IViewListener
+		private void FillTopPager(View template, object model)
 		{
-			Context _context;
-			CarouselView _carouselView;
+			var image = template.FindViewById<ImageView>(Resource.Id.ivIcon);
+			var title = template.FindViewById<TextView>(Resource.Id.tvTitle);
+			var description = template.FindViewById<TextView>(Resource.Id.tvDescription);
 
-			String[] sampleTitles = { "Orange", "Grapes", "Strawberry", "Cherry", "Apricot" };
-			String[] sampleNetworkImageURLs = {
-					"https://placeholdit.imgix.net/~text?txtsize=15&txt=image1&txt=350%C3%97150&w=350&h=150",
-					"https://placeholdit.imgix.net/~text?txtsize=15&txt=image2&txt=350%C3%97150&w=350&h=150",
-					"https://placeholdit.imgix.net/~text?txtsize=15&txt=image3&txt=350%C3%97150&w=350&h=150",
-					"https://placeholdit.imgix.net/~text?txtsize=15&txt=image4&txt=350%C3%97150&w=350&h=150",
-					"https://placeholdit.imgix.net/~text?txtsize=15&txt=image5&txt=350%C3%97150&w=350&h=150"
-			};
-
-			public IntPtr Handle
-			{
-				get;
-				set;
-			}
-
-			public CustomViewListener(Context context, CarouselView carouselView)
-			{
-				_context = context;
-				_carouselView = carouselView;
-				_carouselView.PageCount = sampleNetworkImageURLs.Length;
-			}
-
-
-			public View SetViewForPosition(int position)
-			{
-				View customView = LayoutInflater.From(_context).Inflate(Resource.Layout.LayoutRoadCondition, null);
-
-				//TextView labelTextView = customView.FindViewById<TextView>(Resource.Id.l);
-				//ImageView fruitImageView = customView.FindViewById<ImageView>(Resource.Id.fr);
-
-
-				//Glide.With(_context).Load(sampleNetworkImageURLs[position]).FitCenter().CenterCrop().Into(fruitImageView);
-				//labelTextView.Text = sampleTitles[position];
-
-				_carouselView.IndicatorGravity = (int) (GravityFlags.CenterHorizontal | GravityFlags.Top);
-
-				return customView;
-			}
-
-			public void Dispose()
-			{
-				_context = null;
-				_carouselView = null;
+			var dataModel = model as RoadConditionNotificationModel;
+			if (dataModel != null)
+			{ 
+				Glide.With(this).Load(dataModel.Icon).FitCenter().CenterCrop().Into(image);
+				title.Text = dataModel.Title;
+				description.Text = dataModel.Description;
 			}
 		}
-		*/
+
+		public bool OnTouch(View v, MotionEvent e)
+		{
+			v.Parent.RequestDisallowInterceptTouchEvent(true);
+			return false;
+		}
 	}
 }

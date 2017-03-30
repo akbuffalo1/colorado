@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Android.Content;
 using Android.Runtime;
 using Android.Support.V4.View;
@@ -7,21 +9,33 @@ using Android.Views;
 using Android.Widget;
 using ColoradoRoads.Models;
 using Com.Bumptech.Glide;
+using MvvmCross.Binding.Droid.Views;
 
 namespace ColoradoRoads.Droid.Adapters
 {
 	public class TopCarouselViewAdapter : PagerAdapter
 	{
-		Context _context;
-		IList<RoadConditionNotificationModel> _notifications;
+		public event EventHandler MyCountChanged;
 
-		public TopCarouselViewAdapter(Context context, IList<RoadConditionNotificationModel> notifications)
+		Context _context;
+		IList<object> _modelsList;
+		int _templateId;
+		Action<View, object> _fillData;
+
+		public TopCarouselViewAdapter(Context context, int templateId, Action<View, object> fillData)
 		{
 			_context = context;
-			_notifications = notifications;
+			_templateId = templateId;
+			_fillData = fillData;
 		}
 
-		public override int Count => _notifications?.Count ?? 0;
+		public IEnumerable<object> DataSource
+		{
+			get { return GetDataSource(); }
+			set { SetDataSource(value); }
+		}
+
+		public override int Count => _modelsList?.Count ?? 0;
 
 		public override bool IsViewFromObject(View view, Java.Lang.Object obj)
 		{
@@ -30,24 +44,30 @@ namespace ColoradoRoads.Droid.Adapters
 
 		public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
 		{
-			var dataModel = _notifications[position];
+			var dataModel = _modelsList[position];
 
-			var template = LayoutInflater.From(_context).Inflate(Resource.Layout.LayoutNotificationItem, null);
+			var template = LayoutInflater.From(_context).Inflate(_templateId, container, false);
 
-			var image = template.FindViewById<ImageView>(Resource.Id.ivIcon);
-			var title = template.FindViewById<TextView>(Resource.Id.tvTitle);
-			var description = template.FindViewById<TextView>(Resource.Id.tvDescription);
+			_fillData?.Invoke(template, dataModel);
 
-			Glide.With(_context).Load(dataModel.Icon).FitCenter().CenterCrop().Into(image);
-			title.Text = dataModel.Title;
-			description.Text = dataModel.Description;
+			container.AddView(template);
 			return template;
 		}
 
 		public override void DestroyItem(ViewGroup container, int position, Java.Lang.Object view)
 		{
-			var viewPager = container.JavaCast<ViewPager>();
-			viewPager.RemoveView(view as View);
+			container.RemoveView(view as View);
+		}
+
+		public IEnumerable<object> GetDataSource()
+		{
+			return _modelsList;
+		}
+
+		public void SetDataSource(IEnumerable<object> modelsList)
+		{
+			_modelsList = modelsList.ToList();
+			NotifyDataSetChanged();
 		}
 	}
 }

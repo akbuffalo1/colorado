@@ -14,6 +14,8 @@ using MvvmCross.Platform.IoC;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using ColoradoRoads.Droid.CustomBindings;
+using ColoradoRoads.Droid.Adapters;
 
 namespace ColoradoRoads.Droid
 {
@@ -52,6 +54,8 @@ namespace ColoradoRoads.Droid
 		protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
 		{
 			MvxAppCompatSetupHelper.FillTargetFactories(registry);
+
+			registry.RegisterCustomBindingFactory<TopCarouselViewAdapter>("DataSource", binary => new ViewPagerTargetBinding(binary));
 			base.FillTargetFactories(registry);
 		}
 

@@ -18,9 +18,9 @@ namespace ColoradoRoads.Droid.Views
 	[Activity(Label = "MainMenuView", ParentActivity = typeof(HomeView))]
 	public class MainMenuView : BaseActivity<MainMenuViewModel>
 	{
-		protected override int LayoutId() => Resource.Layout.LayoutMainMenu;
+		protected override int LayoutId() => Resource.Layout.layout_main_menu;
 
-		protected override int MenuId() => Resource.Menu.HomeMenu;
+		protected override int MenuId() => Resource.Menu.menu_home;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
