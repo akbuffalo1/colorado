@@ -1,4 +1,7 @@
 ﻿using Foundation;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Platform;
 using UIKit;
 
 namespace ColoradoRoads.iOS
@@ -6,10 +9,13 @@ namespace ColoradoRoads.iOS
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
 	[Register("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate
+	public class AppDelegate : MvxApplicationDelegate
 	{
-		// class-level declarations
+		UIWindow _window;
 
+		public Presenter Presenter { get; private set; }
+
+		UINavigationController NavigationController => (UINavigationController)Window.RootViewController;
 		public override UIWindow Window
 		{
 			get;
@@ -18,8 +24,15 @@ namespace ColoradoRoads.iOS
 
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
+			_window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+			var setup = new Setup(this, _window);
+			setup.Initialize();
+
+			var startup = Mvx.Resolve<IMvxAppStart>();
+			startup.Start();
+
+			_window.MakeKeyAndVisible();
 
 			return true;
 		}

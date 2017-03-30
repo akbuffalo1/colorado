@@ -20,19 +20,10 @@ namespace ColoradoRoads.ViewModels.Base
 		Lazy<IMvxViewModelLocator> _viewModelLocator = new Lazy<IMvxViewModelLocator>(Mvx.Resolve<IMvxViewModelLocator>);
 		protected Lazy<IRestApiService> _serverApiService = new Lazy<IRestApiService>(Mvx.Resolve<IRestApiService>);
 
-		private Dictionary<string, string> _errors = new Dictionary<string, string>();
-		public Dictionary<string, string> Errors
-		{
-			get { return _errors; }
-			set { _errors = value; RaisePropertyChanged(() => Errors); }
-		}
-
-		private List<Validator> _validators = new List<Validator>();
-		public List<Validator> Validators
-		{
-			get { return _validators; }
-			set { _validators = value; RaisePropertyChanged(() => Validators); }
-		}
+		public Dictionary<string, string> Errors { get; set; }
+		public List<Validator> Validators { get; set;}
+		public virtual bool IsBusy { get; set; }
+		public string OnErrorMessage { get; set; }
 
 		public ViewModelBase()
 		{
@@ -44,12 +35,6 @@ namespace ColoradoRoads.ViewModels.Base
 			get { return ""; }
 		}
 
-		private bool _IsBusy;
-		public virtual bool IsBusy
-		{
-			get { return _IsBusy; }
-			set { _IsBusy = value; RaisePropertyChanged(() => IsBusy); }
-		}
 
 		protected virtual void SetValidators()
 		{

@@ -8,7 +8,7 @@ using MvvmCross.Platform.Droid.Platform;
 
 namespace ColoradoRoads.Droid
 {
-	public class DroidPresenter : MvxAndroidViewPresenter
+	public class Presenter : MvxAndroidViewPresenter
 	{
 		protected readonly IMvxViewModelLoader _viewModelLoader;
 		protected readonly IFragmentTypeLookup _fragmentTypeLookup;
@@ -16,7 +16,7 @@ namespace ColoradoRoads.Droid
 
 		protected IHolder fragmentHolderActivity;
 
-		public DroidPresenter(IMvxViewModelLoader viewModelLoader, IFragmentTypeLookup fragmentTypeLookup)
+		public Presenter(IMvxViewModelLoader viewModelLoader, IFragmentTypeLookup fragmentTypeLookup)
 		{
 			_fragmentTypeLookup = fragmentTypeLookup;
 			_viewModelLoader = viewModelLoader;

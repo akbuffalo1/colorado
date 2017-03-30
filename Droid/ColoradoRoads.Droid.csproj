@@ -194,7 +194,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Bootstrap\UserInteractionPluginBootstrap.cs" />
     <Compile Include="Views\HomeView.cs" />
-    <Compile Include="DroidPresenter.cs" />
+    <Compile Include="Presenter.cs" />
     <Compile Include="FragmentTypeLookup.cs" />
     <Compile Include="Interfaces\IHolder.cs" />
     <Compile Include="Interfaces\IApperance.cs" />
@@ -212,7 +212,9 @@
     <Compile Include="Views\LocationsListView.cs" />
     <Compile Include="Views\SplashActivity.cs" />
     <Compile Include="CustomBindings\ViewPagerTargetBinding.cs" />
-    <Compile Include="Utils\ListViewEx.cs" />
+    <Compile Include="ServicesImpl\Platfrom.cs" />
+    <Compile Include="ServicesImpl\FlagStore.cs" />
+    <Compile Include="Utils\Extentions\ListViewEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -264,6 +266,8 @@
     <Folder Include="Controlls\" />
     <Folder Include="CustomBindings\" />
     <Folder Include="Utils\" />
+    <Folder Include="ServicesImpl\" />
+    <Folder Include="Utils\Extentions\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets')" />

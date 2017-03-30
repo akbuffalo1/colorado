@@ -57,6 +57,8 @@
     <Compile Include="ViewModels\LocationsListViewModel.cs" />
     <Compile Include="Models\Api\LocationsModel.cs" />
     <Compile Include="Models\Api\WeatherNotificationModel.cs" />
+    <Compile Include="Services\Platform\IPlatform.cs" />
+    <Compile Include="Services\Platform\IFlagStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -119,6 +121,7 @@
     <Folder Include="Models\" />
     <Folder Include="Enums\" />
     <Folder Include="Models\Api\" />
+    <Folder Include="Services\Platform\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ProjectExtensions>

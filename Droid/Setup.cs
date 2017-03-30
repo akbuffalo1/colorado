@@ -16,6 +16,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using ColoradoRoads.Droid.CustomBindings;
 using ColoradoRoads.Droid.Adapters;
+using ColoradoRoads.Platform;
+using ColoradoRoads.Droid.ServicesImpl;
 
 namespace ColoradoRoads.Droid
 {
@@ -44,7 +46,7 @@ namespace ColoradoRoads.Droid
 
 		protected override IMvxAndroidViewPresenter CreateViewPresenter()
 		{
-			var presenter = Mvx.IocConstruct<DroidPresenter>();
+			var presenter = Mvx.IocConstruct<Presenter>();
 
 			Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(presenter);
 
@@ -69,13 +71,15 @@ namespace ColoradoRoads.Droid
 		public override void LoadPlugins(IMvxPluginManager pluginManager)
 		{
 			base.LoadPlugins(pluginManager);
-			Mvx.RegisterSingleton<IUserInteraction>(new UserInteraction());
+			Mvx.LazyConstructAndRegisterSingleton<IUserInteraction, UserInteraction>();
 		}
 
 		protected override void InitializePlatformServices()
 		{
 			base.InitializePlatformServices();
 
+			Mvx.LazyConstructAndRegisterSingleton<IPlatform, Platfrom>();
+			Mvx.LazyConstructAndRegisterSingleton<IFlagStore, FlagStore>();
 		}
 
 		protected override void FillValueConverters(IMvxValueConverterRegistry registry)
