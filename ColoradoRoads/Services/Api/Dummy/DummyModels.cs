@@ -28,7 +28,7 @@ namespace ColoradoRoads.Dummy
 
 		public static LocationsModel FavouritesLocationModel = new LocationsModel
 		{
-			Items = Enumerable.Range(0, 5).Select(index => new IdDescriptionListItemModel
+			Items = Enumerable.Range(1, 9).Select(index => new IdDescriptionListItemModel
 			{
 				Id = index,
 				Description = $"Location - {index}"

@@ -67,7 +67,7 @@ namespace ColoradoRoads.Droid
 				if (list?.Count > 0)
 				{ 
         			ViewGroup.LayoutParams layoutParameters = favLocations.LayoutParameters;
-					favLocations.LayoutParameters = new FrameLayout.LayoutParams(layoutParameters.Width, 30 * list.Count);				
+					favLocations.LayoutParameters = new FrameLayout.LayoutParams(layoutParameters.Width, 42 * list.Count);				
 				}
 			});
 
