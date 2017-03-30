@@ -4,6 +4,7 @@ using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Support.V7.Widget;
 using Android.Views;
@@ -47,6 +48,7 @@ namespace ColoradoRoads.Droid
 			topPager.SetClipToPadding(false);
 			topPager.PageMargin = 12;
 
+			FindViewById<TabLayout>(Resource.Id.tlTopPagerDotIndicator).SetupWithViewPager(topPager, true);
 
 			bottomPagerAdapter = new TopCarouselViewAdapter(this, Resource.Layout.layout_weather_notification_item, FillBottomPager);
 			bottomPager = FindViewById<ViewPager>(Resource.Id.BottomCarouselView);
@@ -54,10 +56,10 @@ namespace ColoradoRoads.Droid
 			bottomPager.SetClipToPadding(false);
 			bottomPager.PageMargin = 12;
 
+			FindViewById<TabLayout>(Resource.Id.tlBottomPagerDotIndicator).SetupWithViewPager(bottomPager, true);
 
 			favLocations = FindViewById<MvxListView>(Resource.Id.lvFavouriteLocations);
 			//favLocations.SetListViewHeightBasedOnChildren();
-
 			//favLocations.SetOnTouchListener(this);
 
 			this.AddLinqBinding(ViewModel, vm => vm.FavouriteLocations, list =>

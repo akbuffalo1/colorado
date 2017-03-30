@@ -25,11 +25,24 @@
             android:showDividers="middle"
             android:divider="@drawable/empty_tall_divider"
             android:padding="10dp">
-            <android.support.v4.view.ViewPager
-                android:id="@+id/TopCarouselView"
-                android:background="@android:color/white"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp" />
+                android:layout_height="100dp">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/TopCarouselView"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tlTopPagerDotIndicator"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    local:tabBackground="@drawable/dot_selector"
+                    local:tabGravity="center"
+                    local:tabIndicatorHeight="0dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
             <FrameLayout
                 android:background="@color/bg_gray"
                 android:layout_width="wrap_content"
@@ -98,11 +111,24 @@
                     android:text="Search"
                     android:textSize="16sp" />
             </LinearLayout>
-            <android.support.v4.view.ViewPager
-                android:id="@+id/BottomCarouselView"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="@android:color/white" />
+                android:layout_height="100dp">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/BottomCarouselView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@android:color/white" />
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tlBottomPagerDotIndicator"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    local:tabBackground="@drawable/dot_selector"
+                    local:tabGravity="center"
+                    local:tabIndicatorHeight="0dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

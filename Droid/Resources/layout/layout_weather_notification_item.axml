@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sdasdasd"
-            android:textColor="@color/switch_thumb_normal_material_light" />
+            android:textColor="@android:color/background_dark" />
     </LinearLayout>
     <TextView
         android:id="@+id/tvDescription"

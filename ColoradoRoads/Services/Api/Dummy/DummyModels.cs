@@ -66,7 +66,7 @@ namespace ColoradoRoads.Dummy
 			Items = Enumerable.Range(0, 15).Select(index => new WeatherNotification
 			{
 				Id = index,
-				LocationName = $"Location{1}",
+				LocationName = $"Location{index}",
 				Exits = $"Exit{index} & Exit{index + 1}",
 				WeatherIcon = WeatherIcons[random.Next(0, WeatherIcons.Count)],
 				Temperature = $"High: 5{random.Next(0,9)}F / Low: 3{random.Next(0, 9)}F ",
