@@ -206,7 +206,6 @@
     <Compile Include="Views\LocationsListView.cs" />
     <Compile Include="Views\SplashActivity.cs" />
     <Compile Include="CustomBindings\ViewPagerTargetBinding.cs" />
-    <Compile Include="Controlls\DynamicLinearLayout.cs" />
     <Compile Include="Utils\ListViewEx.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +239,7 @@
     <AndroidResource Include="Resources\layout\activity_location_details.axml" />
     <AndroidResource Include="Resources\layout\activity_locations_list.axml" />
     <AndroidResource Include="Resources\layout\layout_location_list_item.axml" />
+    <AndroidResource Include="Resources\layout\layout_weather_notification_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

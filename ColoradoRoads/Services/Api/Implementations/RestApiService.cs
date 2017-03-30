@@ -27,5 +27,10 @@ namespace ColoradoRoads
 		{
 			throw new NotImplementedException();
 		}
+
+		public virtual Task<List<WeatherNotification>> GetWeatherNotificationModel()
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

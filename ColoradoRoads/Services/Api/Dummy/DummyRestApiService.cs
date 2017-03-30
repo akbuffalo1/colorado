@@ -45,5 +45,14 @@ namespace ColoradoRoads
 				return DummyModels.AllLocationModel;
 			});
 		}
+
+		public override Task<List<WeatherNotification>> GetWeatherNotificationModel()
+		{
+			//	if (App.MOCK_SERVICE_LEVEL == -1) return base.GetFavouriteLocations();
+			return Task.Run(() =>
+			{
+				return DummyModels.WeatherNotificationModel.Items;
+			});
+		}
 	}
 }

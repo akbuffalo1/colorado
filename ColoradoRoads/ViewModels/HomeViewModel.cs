@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ColoradoRoads.Api;
 using ColoradoRoads.Models;
 using ColoradoRoads.ViewModels;
 using ColoradoRoads.ViewModels.Base;
@@ -11,6 +12,7 @@ namespace ColoradoRoads
 	public class HomeViewModel : ViewModelBase
 	{
 		public List<RoadConditionNotificationModel> NotificationModelsList { get; set; }
+		public List<WeatherNotification> WeatherNotificationModelsList { get; set; }
 		public List<AddEditDeleteListItemDataHolder<IdDescriptionListItemModel>> FavouriteLocations { get; set; }
 
 		public IMvxCommand ShowMainMenuCommand { get; set; }
@@ -24,10 +26,10 @@ namespace ColoradoRoads
 
 		protected override async void ObtainAndPrepareData()
 		{
-			var result = await ServerCommandWrapper(_serverApiService.Value.GetNotifications);
-			if (result?.Count > 0)
+			var notifications = await ServerCommandWrapper(_serverApiService.Value.GetNotifications);
+			if (notifications?.Count > 0)
 			{
-				NotificationModelsList = result;
+				NotificationModelsList = notifications;
 			}
 
 			var favLocations = await ServerCommandWrapper(_serverApiService.Value.GetFavouriteLocations);
@@ -38,6 +40,13 @@ namespace ColoradoRoads
 					SelectItemCommand = new MvxCommand(() => HandleFavoritesSelectItemCommand(item))
 				}).ToList();
 			}
+
+			var weatherNotificationModelsList = await ServerCommandWrapper(_serverApiService.Value.GetWeatherNotificationModel);
+			if (weatherNotificationModelsList?.Count > 0)
+			{
+				WeatherNotificationModelsList = weatherNotificationModelsList;
+			}
+
 		}
 
 		void HandleFavoritesSelectItemCommand(IdDescriptionListItemModel itemModel)

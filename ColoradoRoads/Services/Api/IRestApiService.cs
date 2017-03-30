@@ -12,5 +12,6 @@ namespace ColoradoRoads
 		Task<LocationsModel> GetFavouriteLocations();
 		Task<LocationsModel> GetAllLocations();
 		Task<TravelTimeSummaryModel> GetTravelSummary(string type);
+		Task<List<WeatherNotification>> GetWeatherNotificationModel();
 	}
 }
