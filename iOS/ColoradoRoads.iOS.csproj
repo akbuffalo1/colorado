@@ -156,6 +156,227 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_active_status.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_active_status.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_active_status.imageset\icon_status_active.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_active_status.imageset\icon_status_active2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_active_status.imageset\icon_status_active3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_add.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_add.imageset\icon_add.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_add.imageset\icon_add2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_add.imageset\icon_add3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_alert.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_alert.imageset\icon_Alert.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_alert.imageset\icon_Alert_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_alert.imageset\icon_Alert_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_arrow_down.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_arrow_down.imageset\arrow_down.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_arrow_up.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_arrow_up.imageset\arrow_up.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_back_button.imageset\Button_back2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_back_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_back_button.imageset\button_back.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_back_button.imageset\button_back3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_block_schedule_alert.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_block_schedule_alert.imageset\icon_Block_Schedule_Alert.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_block_schedule_alert.imageset\icon_Block_Schedule_Alert_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_block_schedule_alert.imageset\icon_Block_Schedule_Alert_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_add_contact.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_add_contact.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_add_contact.imageset\button_add_contact.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_cancel.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_cancel.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_cancel.imageset\icon_button_cancelx2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_cancel.imageset\icon_button_cancelx3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_copy_patient_address.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_copy_patient_address.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_copy_patient_address.imageset\button_copy_patient_addressx2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_copy_patient_address.imageset\button_copy_patient_addressx3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_next_green.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_next_green.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_next_green.imageset\icon_button_next_greenx2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_next_green.imageset\icon_button_next_greenx3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_prev.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_prev.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_prev.imageset\icon_button_prevx2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_button_prev.imageset\icon_button_prevx3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_change_password_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_change_password_button.imageset\button_change_password.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_change_password_button.imageset\button_change_password2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_change_password_button.imageset\button_change_password3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_check_box_active.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_check_box_active.imageset\ic_check_box_active.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_check_box_inactive.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_check_box_inactive.imageset\ic_check_box_inactive.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_cross.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_cross.imageset\cross.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_delete.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_delete.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_delete.imageset\icon_delete.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_delete_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_delete_button.imageset\button_delete3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_delete_button.imageset\icon_delete.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_delete_button.imageset\icon_delete2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_edit.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_edit.imageset\icon_edit.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_edit.imageset\icon_edit2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_edit.imageset\icon_edit3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_edit_image_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_edit_image_button.imageset\ic_edit.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_email.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_email.imageset\icon_email.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_email.imageset\icon_email2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_email.imageset\icon_email3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_female.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_female.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_female.imageset\icon_female.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_female.imageset\icon_female2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_female.imageset\icon_female3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_history_of_drug_abuse.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_history_of_drug_abuse.imageset\icon_History_of_Drug_Abuse.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_history_of_drug_abuse.imageset\icon_History_of_Drug_Abuse_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_history_of_drug_abuse.imageset\icon_History_of_Drug_Abuse_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_horisontal_arrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_horisontal_arrow.imageset\ic_default_arrow.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_horisontal_arrow.imageset\ic_default_arrow%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_horisontal_arrow.imageset\ic_default_arrow%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_in_collection.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_in_collection.imageset\icon_In_Collections.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_in_collection.imageset\icon_In_Collections_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_in_collection.imageset\icon_In_Collections_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_inactive_status.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_inactive_status.imageset\icon_Inactive.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_inactive_status.imageset\icon_Inactive_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_inactive_status.imageset\icon_Inactive_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_information.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_information.imageset\icon_information.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_information.imageset\icon_information2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_information.imageset\icon_information3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_insurance.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_insurance.imageset\ic_Insurance.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_insurance.imageset\ic_Insurance%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_location.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_location.imageset\icon_location.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_location.imageset\icon_location2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_location.imageset\icon_location3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_logout.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_logout.imageset\icon_logout.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_logout.imageset\icon_logout2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_logout.imageset\icon_logout3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_male.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_male.imageset\icon_male.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_male.imageset\icon_male_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_male.imageset\icon_male_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_management_location.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_management_location.imageset\icon_managment_locations.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_management_location.imageset\icon_managment_locations2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_management_location.imageset\icon_managment_locations3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_medicaid.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_medicaid.imageset\icon_Medicaid.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_medicaid.imageset\icon_Medicaid_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_medicaid.imageset\icon_Medicaid_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_new_location_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_new_location_button.imageset\button_new_location.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_new_role_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_new_role_button.imageset\button_new_role.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_new_user_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_new_user_button.imageset\button_new_user.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_patient_type.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_patient_type.imageset\icon_Patient_Type.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_patient_type.imageset\icon_Patient_Type_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_patient_type.imageset\icon_Patient_Type_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_patients.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_patients.imageset\ic_patients.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_patients.imageset\ic_patients%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_phone.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_phone.imageset\icon_phone.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_phone.imageset\icon_phone2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_phone.imageset\icon_phone3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_plus_white.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_plus_white.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_plus_white.imageset\icon_plus_white.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_practice.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_practice.imageset\ic_Practice.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_practice.imageset\ic_Practice%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_reset_password.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_reset_password.imageset\button_reset_password2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_reset_password.imageset\icon_reset_password.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_reset_password.imageset\icon_reset_password3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_save_button.imageset\Button_save2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_save_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_save_button.imageset\button_save.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_save_button.imageset\button_save3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_schedule_alert.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_schedule_alert.imageset\icon_Schedule_Alert.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_schedule_alert.imageset\icon_Schedule_Alert_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_schedule_alert.imageset\icon_Schedule_Alert_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_sort_asc.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_sort_asc.imageset\icon_sorting.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_sort_asc.imageset\icon_sorting2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_sort_asc.imageset\icon_sorting3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_sort_desc.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_sort_desc.imageset\ic_sort_desc.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_sort_desc.imageset\icon_sorting2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_sort_desc.imageset\icon_sorting3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_tick_mark.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_tick_mark.imageset\icon_Tick_Mark.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_tick_mark.imageset\icon_Tick_Mark_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_tick_mark.imageset\icon_Tick_Mark_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_billing.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_billing.imageset\icon_Billing_&amp;_Insurance.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_billing.imageset\icon_Billing_&amp;_Insurance_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_billing.imageset\icon_Billing_&amp;_Insurance_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_dashboard.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_dashboard.imageset\icon_Dashboard.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_dashboard.imageset\icon_Dashboard_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_dashboard.imageset\icon_Dashboard_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_demographic.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_demographic.imageset\icon_Demographics.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_demographic.imageset\icon_Demographics_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_demographic.imageset\icon_Demographics_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_document.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_document.imageset\icon_Documents.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_document.imageset\icon_Documents_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_document.imageset\icon_Documents_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_medical_history.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_medical_history.imageset\icon_Medical_History.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_medical_history.imageset\icon_Medical_History_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_medical_history.imageset\icon_Medical_History_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_notes.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_notes.imageset\icon_Notes.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_notes.imageset\icon_Notes_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_notes.imageset\icon_Notes_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_rx.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_rx.imageset\icon_Rx.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_rx.imageset\icon_Rx_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_rx.imageset\icon_Rx_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_test_result.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_test_result.imageset\icon_Tests_Results.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_test_result.imageset\icon_Tests_Results_x2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\patient_test_result.imageset\icon_Tests_Results_x3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_erx.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_erx.imageset\eRX.png" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_faxes.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_faxes.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_faxes.imageset\Faxes.png" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_home.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_home.imageset\Home.png" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_management.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_management.imageset\Management.png" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_patients.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_patients.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_patients.imageset\Patients.png" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_profile.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_profile.imageset\Profile.png" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_tasks.imageset\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_tasks.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_tasks.imageset\Tasks.png" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_visits.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tab_bar_item_visits.imageset\Visits.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -169,13 +390,13 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="Views\SplashViewController.xib" />
+    <InterfaceDefinition Include="Views\HomeView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -189,18 +410,24 @@
     <Compile Include="Utils\Attributes\ContainerElementAttribute.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Bootstrap\UserInteractionPluginBootstrap.cs" />
-    <Compile Include="Views\HomeView.cs" />
     <Compile Include="Views\Base\BaseViewController.cs" />
     <Compile Include="Views\Base\KeyboardTextFieldController.cs" />
     <Compile Include="Views\Base\MvxTextFieldResponderController.cs" />
     <Compile Include="Utils\Extentions\LayoutHelpers.cs" />
     <Compile Include="Utils\Attributes\NotCachableAttribute.cs" />
+    <Compile Include="Views\HomeView.cs" />
+    <Compile Include="Views\HomeView.designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="ToastIOS">
       <Version>1.6</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
@@ -212,4 +439,5 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <Import Project="..\packages\Fody.1.29.4\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" />
 </Project>

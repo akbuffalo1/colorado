@@ -1,27 +1,97 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
-	<dependencies>
-		<deployment identifier="iOS" />
-		<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530" />
-	</dependencies>
-	<scenes>
-		<!--View Controller-->
-		<scene sceneID="EHf-IW-A2E">
-			<objects>
-				<viewController id="01J-lp-oVM" sceneMemberID="viewController">
-					<layoutGuides>
-						<viewControllerLayoutGuide type="top" id="Llm-lL-Icb" />
-						<viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok" />
-					</layoutGuides>
-					<view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-						<rect key="frame" x="0.0" y="0.0" width="600" height="600" />
-						<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
-						<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
-					</view>
-				</viewController>
-				<placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder" />
-			</objects>
-			<point key="canvasLocation" x="53" y="375" />
-		</scene>
-	</scenes>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="lRg-7r-FYa" misplaced="YES">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lRg-7r-FYa" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="4uP-GP-sjq"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="lRg-7r-FYa" secondAttribute="bottom" id="dlr-sW-7jO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lRg-7r-FYa" secondAttribute="trailing" id="ik1-Yh-MZz"/>
+                            <constraint firstItem="lRg-7r-FYa" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="qmd-7m-MXY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash.png" width="1080" height="1920"/>
+        <image name="ic_add" width="57" height="56"/>
+        <image name="ic_alert" width="30" height="27"/>
+        <image name="ic_arrow_down" width="25" height="17"/>
+        <image name="ic_arrow_up" width="25" height="17"/>
+        <image name="ic_back_button" width="313" height="113"/>
+        <image name="ic_block_schedule_alert" width="31" height="29"/>
+        <image name="ic_change_password_button" width="276" height="56"/>
+        <image name="ic_check_box_active" width="55" height="46"/>
+        <image name="ic_check_box_inactive" width="55" height="46"/>
+        <image name="ic_cross" width="16" height="16"/>
+        <image name="ic_delete_button" width="171" height="168"/>
+        <image name="ic_edit" width="56" height="56"/>
+        <image name="ic_edit_image_button" width="55" height="55"/>
+        <image name="ic_email" width="23" height="17"/>
+        <image name="ic_history_of_drug_abuse" width="35" height="23"/>
+        <image name="ic_horisontal_arrow" width="20" height="20"/>
+        <image name="ic_in_collection" width="32" height="24"/>
+        <image name="ic_inactive_status" width="103" height="25"/>
+        <image name="ic_information" width="25" height="26"/>
+        <image name="ic_insurance" width="44" height="38"/>
+        <image name="ic_location" width="14" height="20"/>
+        <image name="ic_logout" width="47" height="34"/>
+        <image name="ic_male" width="26" height="25"/>
+        <image name="ic_management_location" width="42" height="63"/>
+        <image name="ic_medicaid" width="26" height="30"/>
+        <image name="ic_new_location_button" width="219" height="56"/>
+        <image name="ic_new_role_button" width="181" height="57"/>
+        <image name="ic_new_user_button" width="179" height="56"/>
+        <image name="ic_patient_type" width="30" height="31"/>
+        <image name="ic_patients" width="96" height="105"/>
+        <image name="ic_phone" width="19" height="20"/>
+        <image name="ic_practice" width="44" height="47"/>
+        <image name="ic_reset_password" width="513" height="113"/>
+        <image name="ic_save_button" width="313" height="114"/>
+        <image name="ic_schedule_alert" width="26" height="25"/>
+        <image name="ic_sort_asc" width="46" height="27"/>
+        <image name="ic_sort_desc" width="47" height="28"/>
+        <image name="ic_tick_mark" width="25" height="21"/>
+        <image name="patient_billing" width="34" height="48"/>
+        <image name="patient_dashboard" width="41" height="41"/>
+        <image name="patient_demographic" width="41" height="41"/>
+        <image name="patient_document" width="36" height="46"/>
+        <image name="patient_medical_history" width="45" height="40"/>
+        <image name="patient_notes" width="41" height="46"/>
+        <image name="patient_rx" width="37" height="45"/>
+        <image name="patient_test_result" width="24" height="48"/>
+        <image name="tab_bar_item_erx" width="60" height="60"/>
+        <image name="tab_bar_item_home" width="60" height="60"/>
+        <image name="tab_bar_item_management" width="70" height="70"/>
+        <image name="tab_bar_item_profile" width="60" height="60"/>
+        <image name="tab_bar_item_visits" width="70" height="70"/>
+    </resources>
 </document>
